@@ -1,0 +1,430 @@
+<!--DOM Manipulation:
+
+<p id="one">
+    hello
+</p>
+
+<script>
+    var tom = document.getElementById("one")
+    console.log(tom.textContent)
+    tom.textContent = "bye"
+</script>-->
+
+
+<!--button click events:
+
+<h1 id="two">
+    Hello world
+</h1>
+
+<button onclick="change()">Change</button>
+
+<script>
+    var tom = document.getElementById("two")
+    console.log(tom.textContent)
+    
+
+    function change()
+    {
+        tom.textContent = "Bye World"
+    }
+
+</script> -->
+
+
+<!-- ===Dom manipulation events (EXERCISE):
+
+<input id="num1">
+<input id="num2">
+<button onclick="resultfunction()">Add</button>
+<p id="result">Result</p>
+
+
+<script>
+    //Selecting input box 1
+    //Selecting input box 2
+
+    var box1=document.getElementById("num1")
+    var box2=document.getElementById("num2")
+                         
+    //Selecting result
+
+    var result=document.getElementById("result")
+
+    function resultfunction()
+    {
+        var box1value=Number(box1.value)
+        var box2value=Number(box2.value)
+
+        var total = (box1value+box2value)
+
+        result.textContent=total
+    }
+
+</script>  -->
+
+<!--Random Number :
+
+<h1>Guess The Number</h1>
+<input id="guessnumber">
+<button onclick="check()">Check</button>
+<p id="result">You are Wrong/Right</p>
+<p id="score">Score:10</p>
+
+<script>
+    var guessnumber=document.getElementById("guessnumber")
+    var score=document.getElementById("score")
+    var result=document.getElementById("result")
+    var randomnumber = Math.floor(Math.random()*10)+1
+    var totalscore=10
+
+    function check()
+    {
+        var enterednumber = guessnumber.value
+        if(randomnumber == enterednumber)
+        {
+            console.log("Right")
+            result.textContent="Right"
+            alert("You Won...❤️")
+        }
+        else{
+            totalscore=totalscore-1
+            score.textContent="score:"+totalscore
+            console.log("Worng")
+        }
+    }
+</script> -->
+
+<!--
+<style>
+    div{
+        background-color: black;
+        width: 100px;
+        height: 100px;
+        transition: 10s;
+        margin-left: 90px;
+        border-radius: 5px;
+    }
+
+    button{
+        margin-left: 90px;
+        margin-top: 10px;
+        background-color: #7D8ABC ;
+        color: #304463;
+        border-radius: 10px;
+        border-style: solid;
+        border-color:#102C57;
+        
+    }
+
+
+</style>
+
+<div id="box"></div>
+<button onclick="change()"> Change color</button>
+
+<script>
+    var box = document.getElementById("box")
+
+    function change()
+    {
+        box.style.backgroundColor="red"
+    }
+</script>   -->
+
+
+
+<!-- <input id="inputbox" onkeyup="update()">
+<h1 id="result"></h1>
+
+
+<script>
+    //select input tag
+    //select h1 tag
+    
+    var inputbox = document.getElementById("inputbox")
+    var result = document.getElementById("result")
+
+    function update()
+    {
+        result.textContent = inputbox.value 
+    }
+
+</script> -->
+
+
+<!-- <button onclick="update()">Add</button>
+<div id="result"></div>
+
+
+<script>
+    //selet h1
+
+    var div = document.getElementById("result")
+
+    function update()
+    {
+        //create new element
+        var listitem = document.createElement("h1")
+        listitem.textContent = "WELCOME"
+        div.append(listitem)
+    }
+</script> -->
+
+
+<!-- <button id="btn" onclick="update()">Change color</button>
+
+<script>
+    //select btn
+    var btn = document.getElementById("btn")
+
+    function update()
+    {
+        btn.style.backgroundColor="yellow"
+    }
+</script> -->
+
+    <!--
+    <h1 id="result">Name</h1>
+    <button onclick="update(event)">Jhon</button>
+    <button onclick="update(event)">karthick</button>
+    <button onclick="update(event)">kavin</button>
+
+    <script>
+        // Select the h1 element
+        var h1 = document.getElementById("result");
+        
+        // Function to update the text content of the h1 element
+        function update(event) {
+            h1.textContent = event.target.textContent
+        }
+    </script>  -->
+
+
+    <!--
+    <h1 onclick="deleteitem(event)"> One </h1>
+    <h1 onclick="deleteitem(event)"> Two </h1>
+    <h1 onclick="deleteitem(event)"> Three </h1>
+    <h1 onclick="deleteitem(event)"> Four </h1>
+    <h1 onclick="deleteitem(event)"> Five </h1>
+    <h1 onclick="deleteitem(event)"> six </h1>
+    <script>
+        var h1 = document.getElementById("one");
+        var btn = document.getElementById("btn");
+
+        function deleteitem(event)
+{
+    event.target.remove()
+}
+
+ </script>  -->
+
+
+               <!--    TODO LIST     -->
+
+               <!--    innerHTML    -->
+
+
+ <!-- <div id="one">
+    hello
+</div>
+
+<script>
+    //div select
+    var div = document.getElementById("one");
+    div.innerHTML="<h1>BYE</h1>"
+</script>  -->
+
+                  <!--     queryselector     -->
+
+<!--
+<div class="one">
+    Hello 
+</div>
+
+<script>
+    //div select
+    var div = document.querySelector(".one")   class vanthal
+    console.log(div)                           . podanum 
+</script>   -->
+
+                       
+
+                <!--     queryselectorAll     -->
+
+<!--
+<h1 class="ok">one</h1>
+<h1 class="ok">two</h1>
+<h1 class="ok">three</h1>
+
+<script>
+    //div select
+    var div = document.querySelectorAll(".ok") 
+    console.log(div)                           
+</script>   -->  
+
+ 
+<!--
+<h1 class="ok">one</h1>
+<h1 class="ok">two</h1>
+<h1 class="ok">three</h1>
+
+<script>
+    //div select
+    var div = document.querySelectorAll(".ok") 
+    console.log(div[0])                           
+</script>     -->
+
+
+<!--
+<h1 class="ok">one</h1>
+<h1 class="ok">two</h1>
+<h1 class="ok">three</h1>
+
+<script>
+    //div select
+    var div = document.querySelectorAll(".ok") 
+    for(count=0;count<div.length;count=count+1)
+      {
+         console.log(div[count].textContent)
+      }
+                         
+</script>    -->
+
+                                 <!--     TODO LIST    -->
+
+
+  <!--                             
+<input id="input">
+<button onclick="add()" >Add</button>
+<ul id="list-consider">
+    <li>Hello
+        <button class="saran" onclick="deleteitem(event)"> Delete</button>
+    </li>
+</ul> 
+
+<script>
+    //selecting ul
+    var ul = document.getElementById("list-consider")
+    var input = document.getElementById("input")
+    function add()
+    {
+        var li = document.createElement("li")
+        li.innerHTML = input.value  + "<button onclick='deleteitem(event)'> Delete</button>"
+        ul.appendChild(li)
+    }
+
+    function deleteitem(event)
+    {
+        event.target.parentElement.remove()
+    }
+</script>
+
+<style>
+    .saran{
+        background-color: red;
+        border-radius: 10px;
+        border-color: rgb(0, 0, 0);
+
+    }
+</style>  --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>Student Form </h1>
+    
+
+        <form>
+            <table border="1">
+                <tr>
+                    <th>Name</th> <th> <input type="text" placeholder="Enter Your Name"</th>
+                </tr>
+
+                <tr>
+                    <th>Age</th> <th> <input type="number" placeholder="Enter Your Age"</th>
+                </tr>
+
+                <tr>
+                    <th>Gender</th> 
+                    <td>
+                         <input type="radio" name="Gender">Male
+                         <input type="radio" name="Gender">Female
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Select a Course</th>
+                    <td>
+                        <select>
+                            <option>Python Programming</option>
+                            <option>Java</option>
+                            <option>c++</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Email</th> <th> <input type="email" placeholder="Enter Your Email"</th>
+                </tr>
+
+                <th> <button> Save</button></th>
+            </center>
+
+                
+        </table>
+             
+        </form>
+
+
+        <br>  <br>
+
+        <form>
+        <table border="1">
+            <tr>
+                <th>Name</th> <th>Age</th> <th>Course</th> <th>Gender</th> <th>Email</th> <th>Action</th>
+            </tr>
+
+        </table>
+        </form>
+</body>
+</html>     -->
