@@ -18,5 +18,3 @@ cancelpopup.addEventListener("click",function(event){
     popupoverlay.style.display = "none"
     popupbox.style.display = "none"
 })
-
-9
