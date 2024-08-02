@@ -1,0 +1,22 @@
+//selecting popup box popup overlay button
+
+var popupoverlay = document.querySelector(".popup-overlay")
+var popupbox = document.querySelector(".popup-box")
+var addpopupbutton = document.getElementById("add-popup-button")
+
+addpopupbutton.addEventListener("click",function(){
+    popupoverlay.style.display = "block"
+    popupbox.style.display = "block"
+})
+
+//selecting cancelpopup
+
+var cancelpopup = document.getElementById("cancelpopup")
+
+cancelpopup.addEventListener("click",function(event){
+    event.preventDefault()
+    popupoverlay.style.display = "none"
+    popupbox.style.display = "none"
+})
+
+9
