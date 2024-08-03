@@ -352,6 +352,22 @@
 </script>>   -->
 
 
+<div>
+    <textarea id="input"></textarea>
+    <button onclick="speck()">speck</button>
+</div>
+
+
+<script>
+    function speck()
+    {
+    var text = document.getElementById("input").value;
+    var utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance)
+    }
+
+</script>
+
 
 
 
